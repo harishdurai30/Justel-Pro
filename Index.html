@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home | Adv. Geraj Vinoth Wilfer</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="icon" type="image/png" href="img/Favicon.png">
+    <style>
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul { list-style: none; padding: 0; margin: 0; }
+
+        /* === NAVBAR=== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999; 
+            background: linear-gradient(90deg, #f6ae2d, #ffd166);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .navbar .logo h2 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            font-weight: 500;
+            transition: 0.3s;
+            font-size: 16px;
+        }
+
+        .nav-links li a:hover {
+            color: #333;
+        }
+
+        /* === MOBILE MENU=== */
+      .menu-toggle {
+    display: none !important;
+}
+
+/* --- MOBILE VIEW ONLY --- */
+ @media (max-width: 768px) {
+ 
+
+        
+        .menu-toggle {
+            display: none !important;
+        }
+
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 15px 20px;
+        }
+
+        .navbar .logo h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            white-space: nowrap;
+        }
+
+       
+        .nav-links {
+            display: flex !important;
+            flex-direction: row;
+            white-space: nowrap;            
+            overflow-x: auto;                 
+            gap: 25px;
+            width: 100%;
+            padding-bottom: 5px;
+            scrollbar-width: none;            
+        }
+
+        .nav-links::-webkit-scrollbar {
+            display: none;                  
+        }
+
+        .nav-links li {
+            list-style: none;
+            flex: 0 0 auto;                  
+        }
+
+        .nav-links li a {
+            color: #fff;
+            font-size: 16px;
+            padding: 5px 0;
+            display: inline-block;
+        }
+    }
+
+        /* === FOOTER === */
+     .site-footer {
+    background: #222;
+    color: #ccc;
+    padding: 60px 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-col h3 {
+    color: #f6ae2d;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.footer-col p, 
+.footer-col address {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.footer-col a {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.footer-col a:hover {
+    color: #f6ae2d;
+}
+
+.map-container {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(246, 174, 45, 0.3);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #999;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .map-container iframe {
+        height: 250px;
+    }
+}
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        
+       
+        /* Stats Section */
+        .stats-section {
+            background-color: #333;
+            padding: 100px 0;
+            color: #fff;
+        }
+
+        .stats-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .stats-section .col-title {
+            flex: 0 0 45%;
+            max-width: 45%;
+            padding-right: 30px;
+        }
+
+        .stats-section .col-title h2 {
+            font-size: 50px;
+            font-weight: bold;
+            line-height: 1.2;
+            color: #fff;
+        }
+
+        .stats-section .highlight-text-light {
+            color: #f6ae2d;
+        }
+
+        .stats-section .col-stats {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        .stats-section .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .stats-section .stat-grid-item {
+            flex: 0 0 calc(50% - 10px);
+            max-width: calc(50% - 10px);
+            box-sizing: border-box;
+        }
+
+        .stats-section .stat-item .number {
+            display: block;
+            font-size: 50px;
+            font-weight: bold;
+            color: #f6ae2d;
+            margin-bottom: 5px;
+            line-height: 1;
+        }
+
+        .stats-section .stat-item .label {
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .stats-section .stat-item p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #ccc;
+            margin-bottom: 0;
+        }
+
+        /* Responsive Adjustments for Stats */
+        @media (max-width: 992px) {
+            .stats-row {
+                flex-direction: column;
+                gap: 60px;
+                text-align: center;
+            }
+
+            .stats-section .col-title,
+            .stats-section .col-stats {
+                flex: 0 0 100%;
+                max-width: 100%;
+                padding-right: 0;
+            }
+
+            .stats-section .stat-grid-item {
+                flex: 0 0 calc(50% - 10px);
+                max-width: calc(50% - 10px);
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .stats-section .stat-grid-item {
+                flex: 0 0 100%;
+                max-width: 100%;
+                text-align: center;
+            }
+        }
+
+        /* Happy Clients / Testimonials Styling */
+        .happy-clients-section {
+            background-color: #333;
+            padding: 100px 0;
+            color: #fff;
+            padding-bottom: 60px; 
+        }
+
+        .happy-clients-section .section-heading {
+            font-size: 45px;
+            font-weight: bold;
+            margin-bottom: 60px;
+            color: #fff; 
+            text-align: left;
+        }
+
+        .happy-clients-section .highlight-text-light {
+            color: #f6ae2d;
+        }
+
+        .testimonial-slider-container {
+            position: relative;
+            padding-bottom: 80px;
+        }
+
+        .testimonial-item {
+            padding: 20px;
+            margin: 0 15px;
+        }
+
+        .quote-box {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .quote-box p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 0;
+        }
+
+        /* Speech bubble tail */
+        .quote-box::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 40px;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid #fff;
+        }
+
+        .client-details {
+            display: flex;
+            align-items: center;
+            margin-top: -30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+            border: 3px solid #f6ae2d;
+            flex-shrink: 0;
+        }
+
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .author-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 2px;
+        }
+
+        .author-title {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+     
+        .owl-nav-custom, .owl-dots-custom {
+            display: none; 
+        }
+
+   
+        .more-expertise-section {
+            background-color: #333;
+            padding: 100px 0;
+            color: #fff;
+             padding-top: 25px;
+        }
+
+        .more-expertise-section .section-heading {
+            font-size: 45px;
+            font-weight: bold;
+            margin-bottom: 60px;
+            color: #fff;
+            text-align: left;
+        }
+
+        .expertise-grid {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -15px;
+        }
+
+        .expertise-grid-item {
+            flex: 0 0 25%;
+            max-width: 25%;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .expertise-item {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .expertise-item .icon-wrap-sm {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #f6ae2d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-shrink: 0;
+        }
+
+        .expertise-item .icon {
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .expertise-item .custom-icon-briefcase::before {
+            content: "\f0b1";
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+        }
+
+        .expertise-item .custom-icon-target-arrow::before {
+            content: "\f140";
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+        }
+
+        .expertise-item .custom-icon-gavel::before {
+            content: "\f0e3";
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+        }
+
+        .expertise-item .custom-icon-castle::before {
+            content: "\f7ee";
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+        }
+
+        .expertise-item h3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .expertise-item p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #666;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .expertise-item .learn-more-container {
+            margin-top: auto;
+            margin-bottom: 0;
+        }
+
+        .expertise-item .more-link-sm {
+            color: #f6ae2d;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .expertise-item .more-link-sm:hover {
+            color: #e09b1f;
+        }
+
+      
+        @media (max-width: 1200px) {
+            .expertise-grid-item {
+                flex: 0 0 33.333%;
+                max-width: 33.333%;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .more-expertise-section .section-heading {
+                text-align: center;
+            }
+
+            .expertise-grid-item {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .expertise-grid-item {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        /* Call to Action Section */
+        .cta-section {
+            background-color: #333;
+            padding: 100px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cta-container {
+            width: 80%;
+            max-width: 1000px;
+            background-image: url('images/cta-background.jpg'); 
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+            padding: 80px 40px;
+        }
+
+        .cta-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: #fff;
+        }
+
+        .cta-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            line-height: 1.3;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #f6ae2d;
+            color: #fff;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #e09b1f;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <h2>Adv.(Dr.)Geraj Vinoth Wilfer</h2>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+         <li><li><a href="Default.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+            <li><a href="Service.html">Services</a></li>
+            <li><a href="Fees.html">Fees</a></li>
+             <li><a href="Faq.html">FAQ</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+  <section class="hero-section" style="
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    background: url('img/jts.svg') center/cover no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #fff;
+">
+   
+    <div style="
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 1;
+    "></div>
+
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 15px; position: relative; z-index: 2;">
+        <div class="col-hero" style="
+            padding: 40px 60px;
+            margin-left: 55%;
+            text-align: left;
+            animation: fadeInUp 1.2s ease-in-out;
+        ">
+            <h1 style="
+                font-size: 60px;
+                font-weight: 800;
+                line-height: 1.1;
+                margin-bottom: 25px;
+            ">
+                <span style="color: #f6ae2d;">Justice Leads</span><br>Our Path
+            </h1>
+
+            
+            <a href="#contact" class="btn-consultation" style="
+                display: inline-block;
+                background-color: #f6ae2d;
+                color: #fff;
+                padding: 14px 32px;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+                transition: all 0.3s ease;
+            ">
+                Free Consultation
+            </a>
+        </div>
+    </div>
+
+    <style>
+       
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+       
+        .btn-consultation:hover {
+            background-color: #e09b1f !important;
+            transform: scale(1.05);
+        }
+
+       
+        @media (max-width: 992px) {
+            .hero-section {
+                height: auto !important;
+                text-align: center !important;
+                padding: 60px 20px !important;
+                background-attachment: scroll !important;
+                background-position: center !important;
+            }
+
+            .col-hero {
+                margin-left: 0 !important;
+                padding: 30px 20px !important;
+                text-align: center !important;
+            }
+
+            .col-hero h1 {
+                font-size: 42px !important;
+                line-height: 1.2 !important;
+            }
+
+            .col-hero p {
+                font-size: 16px !important;
+                max-width: 90% !important;
+                margin: 15px auto 25px !important;
+            }
+
+            .btn-consultation {
+                font-size: 16px !important;
+                padding: 12px 28px !important;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .col-hero h1 {
+                font-size: 34px !important;
+            }
+            .col-hero p {
+                font-size: 15px !important;
+            }
+        }
+    </style>
+</section>
+
+
+<!-- PRACTICE AREA -->
+<section style="background-color:#333; color:#fff; padding:80px 0; text-align:center; position:relative; overflow:hidden;">
+    <div style="max-width:1200px; margin:0 auto; position:relative;">
+
+        <h2 class="practice-heading">PRACTICE AREA</h2>
+
+        <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px; position:relative; z-index:2;">
+
+            <!-- FAMILY -->
+            <div class="practice-card" style="background:linear-gradient(135deg,#5a4e9c,#8e7cc3); width:340px; padding:40px 30px; border-radius:20px; transition:all 0.4s ease; animation:fadeInUp 1s ease; cursor:pointer;">
+                <div style="width:120px; height:120px; border-radius:50%; overflow:hidden; margin:0 auto 20px;">
+                    <img src='img/Family (1).jpg' alt='Family Law' style='width:100%; height:100%; object-fit:cover;'>
+                </div>
+                <h3 style="font-size:22px; margin-bottom:20px;">FAMILY</h3>
+                <ul style="list-style:none; padding:0; text-align:left; line-height:1.8; font-size:15px;">
+                    <li>• Property Claims</li>
+                    <li>• Partition</li>
+                    <li>• Eviction & Rental</li>
+                    <li>• Divorce & Compensation</li>
+                    <li>• Bail & Anticipatory Bail</li>
+                </ul>
+            </div>
+
+            <!-- PROPERTY -->
+            <div class="practice-card" style="background:linear-gradient(135deg,#3b4b92,#667bdb); width:340px; padding:40px 30px; border-radius:20px; transition:all 0.4s ease; animation:fadeInUp 1.3s ease; cursor:pointer;">
+                <div style="width:120px; height:120px; border-radius:50%; overflow:hidden; margin:0 auto 20px;">
+                    <img src='img/Property (1).jpg' alt='Property Law' style='width:100%; height:100%; object-fit:cover;'>
+                </div>
+                <h3 style="font-size:22px; margin-bottom:20px;">PROPERTY</h3>
+                <ul style="list-style:none; padding:0; text-align:left; line-height:1.8; font-size:15px;">
+                    <li>• Legal Opinion & Registration</li>
+                    <li>• Trademark & Patent</li>
+                    <li>• Mediation & Settlement</li>
+                    <li>• Documentation</li>
+                    <li>• Will & Asset Management</li>
+                </ul>
+            </div>
+
+            <!-- BUSINESS -->
+            <div class="practice-card" style="background:linear-gradient(135deg,#2f6b74,#4cb0a0); width:340px; padding:40px 30px; border-radius:20px; transition:all 0.4s ease; animation:fadeInUp 1.6s ease; cursor:pointer;">
+                <div style="width:120px; height:120px; border-radius:50%; overflow:hidden; margin:0 auto 20px;">
+                    <img src='img/Business (1).jpg' alt='Business Law' style='width:100%; height:100%; object-fit:cover;'>
+                </div>
+                <h3 style="font-size:22px; margin-bottom:20px;">BUSINESS</h3>
+                <ul style="list-style:none; padding:0; text-align:left; line-height:1.8; font-size:15px;">
+                    <li>• Contract Drafting</li>
+                    <li>• Risk Management</li>
+                    <li>• Compliance Documentation</li>
+                    <li>• Arbitration</li>
+                    <li>• Cheque Bounce</li>
+                    <li>• Trial, Quash & Discharge</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- ARROW BELOW CONTENT -->
+        <div class="arrow-line"></div>
+
+    </div>
+
+    <style>
+        @keyframes fadeInUp {
+            from { opacity:0; transform:translateY(40px); }
+            to { opacity:1; transform:translateY(0); }
+        }
+
+        .practice-heading { 
+            text-align: center;
+            color: #fff;
+            font-size: 2rem;
+            margin-top: 50px;
+            margin-bottom: 40px;
+            position: relative;
+            display: block;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .practice-heading::after {
+            content: "";
+            display: block;
+            width: 150px;
+            height: 3px;
+            margin: 10px auto 0;
+            background: linear-gradient(90deg, #f6ae2d, #ffe9a3);
+            border-radius: 2px;
+        }
+
+        /* PURE CSS ARROW LINE BELOW CARDS */
+        .arrow-line {
+            position: relative;
+            margin: 70px auto 0;
+            width: 80%;
+            height: 6px;
+            background: #fff;
+            border-radius: 3px;
+        }
+        .arrow-line::before,
+        .arrow-line::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 0;
+            height: 0;
+            border: 12px solid transparent;
+            transform: translateY(-50%);
+        }
+        .arrow-line::before {
+            left: -24px;
+            border-right-color: #fff;
+        }
+        .arrow-line::after {
+            right: -24px;
+            border-left-color: #fff;
+        }
+
+        /* Hover effects */
+        .practice-card:hover {
+            transform:scale(1.05) translateY(-5px);
+            box-shadow:0 10px 25px rgba(0,0,0,0.4);
+            background:linear-gradient(135deg,#f6ae2d,#e6a100);
+        }
+        .practice-card:hover h3 { color:#222; transition:color 0.3s ease; }
+        .practice-card:hover ul li { color:#222; }
+
+        /* Responsive */
+        @media (max-width:768px){
+            .arrow-line { width:70%; margin:50px auto 0; }
+            .practice-card { width:90% !important; }
+        }
+        @media (max-width:576px){
+            .practice-heading { font-size: 1.6rem; margin-bottom: 30px; }
+            .practice-heading::after { width: 100px; }
+            .arrow-line { width:80%; height:4px; margin:40px auto 0; }
+            .arrow-line::before, .arrow-line::after { border-width:8px; }
+        }
+    </style>
+</section>
+
+
+
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="row stats-row">
+                <div class="col-title">
+                    <h2>
+                        <span class="highlight-text-light">18 Years</span> of
+                        <br />
+                        Experience in 
+                        <br />
+                        Various Cases
+                    </h2>
+                </div>
+                
+                <div class="col-stats">
+                    <div class="row stats-grid">
+                        <div class="stat-grid-item">
+                            <div class="stat-item">
+                                <span class="number" data-target="10">10+</span>
+                                <span class="label">Projects & Awards</span>
+                                <p>Honored by leading institutions for outstanding performance, reliability, and professional excellence.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-grid-item">
+                            <div class="stat-item">
+                                <span class="number" data-target="70">70%</span>
+                                <span class="label">Cases Wins</span>
+                                <p>Our strong success rate reflects trusted advocacy, legal excellence, and consistent performance.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-grid-item">
+                            <div class="stat-item">
+                                <span class="number" data-target="200">200+</span>
+                                <span class="label">Clients</span>
+                                <p>Serving a growing network of clients who value excellence, commitment, and consistent success.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-grid-item">
+                            <div class="stat-item">
+                                <span class="number" data-target="10">10+</span>
+                                <span class="label">Associates</span>
+                                <p>Driven professionals collaborating seamlessly to achieve results with precision and shared expertise.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="happy-clients-section">
+        <div class="container">
+            <h2 class="practice-heading">HAPPY CLIENTS</h2>
+
+            
+            <div class="testimonial-slider-container">
+                <div class="testimonial-slider owl-carousel">
+                    
+                    <div class="testimonial-item">
+                        <div class="quote-box">
+                            <p>Adv. Geraj Vinoth handled my case with great professionalism and patience. He clearly explained every step of the process and provided honest advice. I truly appreciated his responsiveness and commitment to achieving the best outcome. Overall, I had a positive and reassuring experience, and I would definitely recommend his services to others.</p>
+                        </div>
+                        <div class="client-details">
+                            <div class="author-image">
+                                <img src="img/Rev1.png" alt="Image of Yukesh Simson" class="img-fluid">
+                            </div>
+                            <div class="author-info">
+                                <span class="author-name">Yukesh Simson</span>
+                                <!-- <span class="author-title">CEO, Co-Founder</span> -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-item">
+                        <div class="quote-box">
+                            <p>Good service for reasonable fee
+Very good adviser
+Guided me and saved me from wrong transaction .
+Handled my case patiently. I felt comfortable to share personal details .
+He is reliable to protect property and personal documents .
+He is honest. Not money minded.
+He is 100% truthful. Will not change sides.
+He helped me even when I ignored his advice.
+He is always available to discuss..</p>
+                        </div>
+                        <div class="client-details">
+                            <div class="author-image">
+                                <img src="img/Rev2.png" alt="Image of Benison" class="img-fluid">
+                            </div>
+                            <div class="author-info">
+                                <span class="author-name">Benison</span>
+                                <!-- <span class="author-title">CEO, Co-Founder</span> -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-item">
+                        <div class="quote-box">
+                            <p>My parents only know 1 language and that’s Hindi, they had good experience with him— I must say Advocate Geraj Wilfer has strong hold on Hindi language, he understood everything so well and guided us to solve our case.</p>
+                        </div>
+                        <div class="client-details">
+                            <div class="author-image">
+                                <img src="img/Rev3.png" alt="Image of Nishaa Sharmaa" class="img-fluid">
+                            </div>
+                            <div class="author-info">
+                                <span class="author-name">Nishaa Sharmaa</span>
+                                <!-- <span class="author-title">CEO, Co-Founder</span> -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="owl-nav-custom">
+                    <button class="owl-prev-custom"><i class="fas fa-arrow-left"></i></button>
+                    <button class="owl-next-custom"><i class="fas fa-arrow-right"></i></button>
+                </div>
+                <div class="owl-dots-custom"></div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="more-expertise-section">
+        <div class="container">
+           <h2 class="practice-heading">MORE EXPERTISE</h2>
+            <div class="row expertise-grid">
+                
+                <div class="expertise-grid-item">
+                    <div class="expertise-item">
+                        <div class="icon-wrap-sm">
+                            <span class="icon custom-icon-briefcase"></span>
+                        </div>
+                        <h3>Labor and Employment</h3>
+                        <p>In the world of work and rights, we bridge fairness and law with dedication, ensuring every voice is heard and every right protected.</p>
+                        <p class="learn-more-container"><a href="#" class="more-link-sm">Learn More &rarr;</a></p>
+                    </div>
+                </div>
+                
+                <div class="expertise-grid-item">
+                    <div class="expertise-item">
+                        <div class="icon-wrap-sm">
+                            <span class="icon custom-icon-target-arrow"></span>
+                        </div>
+                        <h3>Corporate & Civil Litigation</h3>
+                        <p>In the arena of law and commerce, we stand for fairness and resolve — where reason meets resilience, and justice finds balance.</p>
+                        <p class="learn-more-container"><a href="#" class="more-link-sm">Learn More &rarr;</a></p>
+                    </div>
+                </div>
+                
+                <div class="expertise-grid-item">
+                    <div class="expertise-item">
+                        <div class="icon-wrap-sm">
+                            <span class="icon custom-icon-gavel"></span>
+                        </div>
+                        <h3>Intellectual Property Law</h3>
+                        <p>In a world driven by ideas, we protect imagination and innovation, where creativity meets law and ownership finds its voice.</p>
+                        <p class="learn-more-container"><a href="#" class="more-link-sm">Learn More &rarr;</a></p>
+                    </div>
+                </div>
+                
+                <div class="expertise-grid-item">
+                    <div class="expertise-item">
+                        <div class="icon-wrap-sm">
+                            <span class="fas fa-landmark"></span>
+                        </div>
+                        <h3>Criminal Prosecution and Defense</h3>
+                        <p>In the pursuit of truth and justice, we stand firm — defending the innocent, upholding rights, and restoring faith in fairness.</p>
+                        <p class="learn-more-container"><a href="#" class="more-link-sm">Learn More &rarr;</a></p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready for Legal Help? Book a Consultation.</h2>
+                <a href="#" class="cta-button">Get Free Consultation</a>
+            </div>
+        </div>
+    </section>
+    
+   <footer class="site-footer">
+    <div class="footer-grid">
+
+        
+        <div class="footer-col">
+    <h3>Contact</h3>
+    <p>
+        <a href="tel:+919445512746">
+            <i class="fas fa-phone"></i> +91 94455 12746
+        </a><br><br>
+
+        <a href="mailto:advocategerajvinothwilfer@gmail.com">
+            <i class="fas fa-envelope"></i> advocategerajvinothwilfer@gmail.com
+        </a><br><br>
+
+        <a href="https://wa.me/919445512746?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20legal%20services."
+           target="_blank">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+    </p>
+</div>
+
+      
+        <div class="footer-col">
+            <h3>Address</h3>
+            <address>
+                5, Veema Square Extension,<br />
+                Cathedral Colony 2nd Street,<br />
+                Perumalpuram P.O., Palayamkottai,<br />
+                Tirunelveli District,<br />
+                Tamil Nadu, India – 627007
+            </address>
+        </div>
+
+       
+        <div class="footer-col">
+            <h3>Find Us</h3>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.073051989424!2d77.7425362!3d8.6846033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0413abcf37dda5%3A0xcf4c4832e25fbf22!2sAdvocate%20(Dr.)%20Geraj%20Vinoth%20Wilfer!5e0!3m2!1sen!2sin!4v1762941017891!5m2!1sen!2sin"
+                    width="100%"
+                    height="200"
+                    style="border:0; border-radius:8px;"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+    <p>
+        &copy; 2025 Justelpro V2.4 | Designed by 
+        <a href="https://g2gtechnologies.com" target="_blank" style="color: #f6ae2d; text-decoration: none;">
+            G2G Technologies
+        </a>
+    </p>
+</div>
+
+</footer>
+
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const counters = document.querySelectorAll(".stat-item .number");
+  const speed = 100; 
+
+  const animateCount = (counter) => {
+    const target = counter.getAttribute("data-target") || counter.innerText.replace(/\D/g, "");
+    const suffix = counter.innerText.replace(/[0-9]/g, ""); 
+    const count = +target;
+    let start = 0;
+
+    const updateCount = () => {
+      const increment = count / speed;
+      if (start < count) {
+        start += increment;
+        counter.innerText = Math.ceil(start) + suffix;
+        requestAnimationFrame(updateCount);
+      } else {
+        counter.innerText = count + suffix;
+      }
+    };
+
+    updateCount();
+  };
+
+  // Use IntersectionObserver to animate only when visible
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.classList.contains("animated")) {
+        entry.target.classList.add("animated");
+        animateCount(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(counter => observer.observe(counter));
+});
+</script>
+
+
+</body>
+</html>
