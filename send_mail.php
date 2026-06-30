@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'counsel@justelpro.com'; 
-        $mail->Password = '@&Un0R57Gy!6'; // ← Must use App Password
+        $mail->Password = ''; // Password
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
 
